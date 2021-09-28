@@ -99,9 +99,9 @@ process_ag_census <- function(){
   
   # "https://www.nass.usda.gov/Publications/AgCensus/2012/Online_Resources/Census_Data_Query_Tool/2012_cdqt_data.txt.gz"
   # "https://www.nass.usda.gov/Publications/AgCensus/2017/Online_Resources/Census_Data_Query_Tool/2017_cdqt_data.txt.gz"
-  census_2012 <- read.delim("data/nass/2012_cdqt_data.txt", header = TRUE) %>%
+  census_2012 <- read.delim("data/ignore/nass/2012_cdqt_data.txt", header = TRUE) %>%
     bind_rows(get_adaptation_2012())
-  census_2017 <- read.delim("data/nass/2017_cdqt_data.txt", header = TRUE)
+  census_2017 <- read.delim("data/ignore/nass/2017_cdqt_data.txt", header = TRUE)
   
   # load metadata on variables to import
   md <- read_xlsx("data/nass/variables.xlsx") %>%

@@ -29,3 +29,4 @@ vignettes/*.pdf
 .drake
 ca2cc-county.Rproj
 code/exploratory
+data/ignore
