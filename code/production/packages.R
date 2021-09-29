@@ -1,3 +1,4 @@
+# cran packages
 library(drake)
 library(tidyverse)
 library(haven)
@@ -10,8 +11,12 @@ library(here)
 library(readxl)
 library(sf)
 library(acs)
+library(slider)
 
+# non-cran packages
+library(hydro) # devtools::install_github("matthewkling/hydro")
 
+# namespace conflict resolution
 library(conflicted)
 conflict_prefer("select", "dplyr", quiet = T)
 conflict_prefer("filter", "dplyr", quiet = T)
