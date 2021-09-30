@@ -21,7 +21,7 @@ process_acs <- function(){
   
   `%notin%` <- Negate(`%in%`)
   
-  api.key.install("349f048c79fdba24fa2d6cef80a5e4443d72f2af")
+  api.key.install(acs_key)
   
   #------- POPULATION -------- 
   population <- read_xls("data/nass/acs_population.xls", skip=2)
