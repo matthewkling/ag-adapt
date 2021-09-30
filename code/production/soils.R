@@ -1,7 +1,6 @@
 
 process_soils <- function(){
   
-  
   ## cultivated land ##################
   
   # # NASS national cultivated lands layer, from 
@@ -21,19 +20,18 @@ process_soils <- function(){
   # template <- crop(template, ext)
   # 
   # culp <- projectRaster(cult, template)
-  # writeRaster(culp, "data/raster/cultivated_lands_agg300_chelsaproj.tif", overwrite = T)
-  culp <- raster("data/raster/cultivated_lands_agg300_chelsaproj.tif")
-  
+  # writeRaster(culp, "data/ignore/raster/cultivated_lands_agg300_chelsaproj.tif", overwrite = T)
+  culp <- raster("data/ignore/raster/cultivated_lands_agg300_chelsaproj.tif")
   
   
   ## counties ###################
   
-  # counties <- readOGR("data/cb_2018_us_county_500k/cb_2018_us_county_500k.shp")
+  # counties <- readOGR("data/Counties/cb_2018_us_county_500k.shp")
   # counties$FP <- as.integer(paste0(counties$STATEFP, counties$COUNTYFP))
   # counties <- spTransform(counties, crs(culp))
   # counties <- counties %>% st_as_sf() %>% fasterize(culp, field = "FP")
-  # writeRaster(counties, "data/raster/counties_chelsaproj.tif", overwrite = T)
-  counties <- raster("data/raster/counties_chelsaproj.tif")
+  # writeRaster(counties, "data/ignore/raster/counties_chelsaproj.tif", overwrite = T)
+  counties <- raster("data/ignore/raster/counties_chelsaproj.tif")
   
   
   ## soils ###############
@@ -48,10 +46,11 @@ process_soils <- function(){
   #   mean() %>% 
   #   aggregate(4) %>% 
   #   projectRaster(culp)
-  # writeRaster(clay, "data/raster/clay_chelsaproj.tif", overwrite = T)
-  clay <- raster("data/raster/clay_chelsaproj.tif")
+  # writeRaster(clay, "data/ignore/raster/clay_chelsaproj.tif", overwrite = T)
+  clay <- raster("data/ignore/raster/clay_chelsaproj.tif")
   
-  ## combine and summarize datasets ###########
+  
+  ## combine and summarize ###########
   
   s <- stack(counties, culp, clay) %>%
     setNames(c("county_fips", "prop_cult", "pct_clay"))
