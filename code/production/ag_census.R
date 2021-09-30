@@ -32,11 +32,11 @@ get_adaptation_2012 <- function(){
 }
 
 
-
-
 # fill missing values via weighted allocation from parent political regions
-fill_missing <- function(x, w, level, parent = "STATE", child = "COUNTY", 
-                         stat = "sum"){
+fill_missing <- function(x, w, 
+                         level, parent = "STATE", child = "COUNTY",
+                         stat = "sum",
+                         estimate = "mean"){
   if(!any(is.na(x[level == child]))) return(x)
   if(stat == "mean") x <- x * w
   y <- x
@@ -45,7 +45,11 @@ fill_missing <- function(x, w, level, parent = "STATE", child = "COUNTY",
   cw <- w[level == child]
   ux <- px - sum(cx, na.rm = T)
   ui <- which(is.na(cx))
-  cx[ui] <- ux * cw[ui] / sum(cw[ui])
+  s <- switch(estimate,
+              min = 0, # .5 / ux, # minimum value large enough to be reported
+              mean = cw[ui] / sum(cw[ui]), # weighted mean
+              max = 1) #(ux - .5 * length(ui) + .5) / ux) # if all other children had min
+  cx[ui] <- ux * s
   y[level == child] <- cx
   y[level == parent] <- px
   if(stat == "mean"){
@@ -54,6 +58,7 @@ fill_missing <- function(x, w, level, parent = "STATE", child = "COUNTY",
   }
   return(y)
 }
+
 
 # test that fill_missing works as expected
 test_fill <- function(){
@@ -147,23 +152,36 @@ process_ag_census <- function(){
   
   
   # fill state from national, and then county from state
-  fill <- function(var, year, stat, wvar, data){
-    # if(var == "tile_drainage_acres_per_op") browser()
+  fill <- function(var, stat, wvar, data){
     y <- data %>% 
       filter(name %in% na.omit(c(var, wvar)))
-    if(is.na(wvar)) return(y %>% mutate(value_imputed = value))
+    if(is.na(wvar)) return(y %>% mutate(imputed = value, floor = value, ceiling = value))
+    # if(var == "tile_drainage_acres") browser()
     y <- y %>% 
       mutate(name = case_when(name == var ~ "value",
                               name == wvar ~ "weight")) %>%
       spread(name, value) %>%
+      
       group_by(year) %>%
-      mutate(value_imputed = 
-               fill_missing(value, weight, stat = stat, 
+      mutate(imputed = value %>%
+               fill_missing(weight, stat = stat, estimate = "mean",
+                            level = agg, parent = "NATIONAL", child = "STATE"),
+             floor = value %>%
+               fill_missing(weight, stat = stat, estimate = "min",
+                            level = agg, parent = "NATIONAL", child = "STATE"),
+             ceiling = value %>%
+               fill_missing(weight, stat = stat, estimate = "max",
                             level = agg, parent = "NATIONAL", child = "STATE")) %>%
       group_by(state_fips_code, year) %>%
-      mutate(value_imputed = 
-               fill_missing(value_imputed, weight, stat = stat, 
-                            level = agg, parent = "STATE", child = "COUNTY")) %>%
+      mutate(imputed = imputed %>%
+               fill_missing(weight, stat = stat, estimate = "mean",
+                             level = agg, parent = "STATE", child = "COUNTY"),
+             floor = floor %>%
+               fill_missing(weight, stat = stat, estimate = "min",
+                             level = agg, parent = "STATE", child = "COUNTY"),
+             ceiling = ceiling %>%
+               fill_missing(weight, stat = stat, estimate = "max",
+                             level = agg, parent = "STATE", child = "COUNTY")) %>%
       mutate(name = var) %>%
       select(-weight)
     return(y)
@@ -184,15 +202,15 @@ process_ag_census <- function(){
     mutate(name = ifelse(is.na(parent), name, parent)) %>%
     select(-parent) %>%
     group_by(state_fips_code, county_code, name, year) %>%
-    mutate(value = sum(value)) # works because all parent vars are sums, not means
+    mutate_at(vars(value, imputed, floor, ceiling),
+              sum) # works because all parent vars are sums, not means
   
   
   ## final reformatting for downstream compatibility ####################
   
   d <- clean_fips(d, "state_fips_code", "county_code") %>%
     rename(variable = name,
-           value_raw = value,
-           value = value_imputed)
+           raw = value)
   
   return(d)
 }
