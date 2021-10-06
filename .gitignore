@@ -30,3 +30,4 @@ vignettes/*.pdf
 ca2cc-county.Rproj
 code/exploratory
 data/ignore
+api_keys.R

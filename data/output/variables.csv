@@ -1,0 +1,77 @@
+source_dataset,variable,unit,description,era,season,statistic
+NASS Ag Census,25_to_34,operations,"producers, principal, age 25 to 34 - number of producers + operators, principal, age 25 to 34 - number of operators","2012, 2017",NA,NA
+NASS Ag Census,35_to_44,operations,"producers, principal, age 35 to 44 - number of producers + operators, principal, age 35 to 44 - number of operators","2012, 2017",NA,NA
+NASS Ag Census,45_to_54,operations,"producers, principal, age 45 to 54 - number of producers + operators, principal, age 45 to 54 - number of operators","2012, 2017",NA,NA
+NASS Ag Census,55_to_64,operations,"producers, principal, age 55 to 64 - number of producers + operators, principal, age 55 to 59 - number of operators + operators, principal, age 60 to 64 - number of operators","2012, 2017",NA,NA
+NASS Ag Census,65_plus,operations,"producers, principal, age 65 to 74 - number of producers + producers, principal, age ge 75 - number of producers + operators, principal, age 65 to 69 - number of operators + operators, principal, age ge 70 - number of operators","2012, 2017",NA,NA
+NASS Ag Census,acres_operated,acres,farm operations - acres operated,"2012, 2017",NA,NA
+NASS Ag Census,chemical_expenses,dollars,"chemical totals - expense, measured in $","2012, 2017",NA,NA
+NASS Ag Census,chemical_ops,operations,chemical totals - operations with expense,"2012, 2017",NA,NA
+NASS Ag Census,cons_prog_ops,operations,"govt programs, federal, conservation & wetlands - operations with receipts","2012, 2017",NA,NA
+NASS Ag Census,cons_prog_receipts,dollars,"govt programs, federal, conservation & wetlands - receipts, measured in $ / operation","2012, 2017",NA,NA
+NASS Ag Census,corpland_acres_harvested,acres,"ag land, cropland, harvested - acres","2012, 2017",NA,NA
+NASS Ag Census,cover_crop_acres,acres,"practices, land use, cropland, cover crop planted, (excl crp) - acres + land planted to a cover crop (excluding crp), acres, 2012","2012, 2017",NA,NA
+NASS Ag Census,cover_crop_acres_per_op,acres,"practices, land use, cropland, cover crop planted, (excl crp) - area, measured in acres / operation + land planted to a cover crop (excluding crp), acres, avg per farm, 2012","2012, 2017",NA,NA
+NASS Ag Census,cover_crop_ops,operations,"practices, land use, cropland, cover crop planted, (excl crp) - number of operations + land planted to a cover crop (excluding crp), farms, 2012","2012, 2017",NA,NA
+NASS Ag Census,crop_insurance_acres,acres,"ag land, crop insurance - acres","2012, 2017",NA,NA
+NASS Ag Census,crop_insurance_ops,operations,"ag land, crop insurance - number of operations","2012, 2017",NA,NA
+NASS Ag Census,cropland_acres,acres,"ag land, cropland - acres","2012, 2017",NA,NA
+NASS Ag Census,cropland_ops,operations,"ag land, cropland - number of operations","2012, 2017",NA,NA
+NASS Ag Census,cropland_ops_harvested,operations,"ag land, cropland, harvested - number of operations","2012, 2017",NA,NA
+NASS Ag Census,fed_prog_ops,operations,"govt programs, federal, (excl conservation & wetlands) - operations with receipts","2012, 2017",NA,NA
+NASS Ag Census,fed_prog_receipts,dollars,"govt programs, federal, (excl conservation & wetlands) - receipts, measured in $ / operation","2012, 2017",NA,NA
+NASS Ag Census,female_prods,operations,"producers, principal, female - number of operations + operators, principal, female - number of operations","2012, 2017",NA,NA
+NASS Ag Census,fertilizer_expenses,dollars,"fertilizer totals, incl lime & soil conditioners - expense, measured in $","2012, 2017",NA,NA
+NASS Ag Census,fertilizer_ops,operations,"fertilizer totals, incl lime & soil conditioners - operations with expense","2012, 2017",NA,NA
+NASS Ag Census,irrigated_acres,acres,"ag land, irrigated - acres","2012, 2017",NA,NA
+NASS Ag Census,irrigated_ops,operations,"ag land, irrigated - number of operations","2012, 2017",NA,NA
+NASS Ag Census,labor_contract_expenses,dollars,"labor, contract - expense, measured in $","2012, 2017",NA,NA
+NASS Ag Census,labor_contract_ops,dollars,"labor, contract - operations with expense","2012, 2017",NA,NA
+NASS Ag Census,labor_hired_expenses,dollars,"labor, hired - expense, measured in $","2012, 2017",NA,NA
+NASS Ag Census,labor_hired_ops,dollars,"labor, hired - operations with expense","2012, 2017",NA,NA
+NASS Ag Census,mean_farm_size,acres,"farm operations - area operated, measured in acres / operation","2012, 2017",NA,NA
+NASS Ag Census,n_farm_ops,operations,farm operations - number of operations,"2012, 2017",NA,NA
+NASS Ag Census,net_income,dollars,"income, net cash farm, of operations - net income, measured in $ / operation","2012, 2017",NA,NA
+NASS Ag Census,newcomer_led,operations,"producers, principal, years on any operation, lt 6 years - number of producers + producers, principal, years on any operation, 6 to 10 years - number of producers + operators, principal, years on any operation, lt 3 years - number of operators + operators, principal, years on any operation, 3 to 4 years - number of operators + operators, principal, years on any operation, 5 to 9 years - number of operators","2012, 2017",NA,NA
+NASS Ag Census,no_till_acres,acres,"practices, land use, cropland, conservation tillage, no-till - acres + land on which no-till practices were used, acres, 2012","2012, 2017",NA,NA
+NASS Ag Census,no_till_acres_per_op,acres,"practices, land use, cropland, conservation tillage, no-till - area, measured in acres / operation + land on which no-till practices were used, acres, avg per farm, 2012","2012, 2017",NA,NA
+NASS Ag Census,no_till_ops,operations,"practices, land use, cropland, conservation tillage, no-till - number of operations + land on which no-till practices were used, farms, 2012","2012, 2017",NA,NA
+NASS Ag Census,nonwhite_led,operations,"producers, principal, hispanic - number of operations + producers, principal, american indian or alaska native - number of operations + producers, principal, asian - number of operations + producers, principal, black or african american - number of operations + producers, principal, native hawaiian or other pacific islander - number of operations + producers, principal, multi-race - number of operations + operators, principal, hispanic - number of operations + operators, principal, american indian or alaska native - number of operations + operators, principal, asian - number of operations + operators, principal, black or african american - number of operations + operators, principal, native hawaiian or other pacific islander - number of operations + operators, principal, multi-race - number of operations","2012, 2017",NA,NA
+NASS Ag Census,organic_prods,operations,"farm operations, organic - number of operations organic status: (nop usda certified) + farm operations, organic - number of operations organic status: (nop usda exempt) + ag land, organic, transitioning - number of operations organic status: (transitioning)","2012, 2017",NA,NA
+NASS Ag Census,pastured_cropland_acres,acres,"ag land, cropland, pastured only - acres","2012, 2017",NA,NA
+NASS Ag Census,pastured_cropland_ops,operations,"ag land, cropland, pastured only - number of operations","2012, 2017",NA,NA
+NASS Ag Census,pastured_other_acres,acres,"ag land, pastureland, (excl cropland & woodland) - acres","2012, 2017",NA,NA
+NASS Ag Census,pastured_other_ops,operations,"ag land, pastureland, (excl cropland & woodland) - number of operations","2012, 2017",NA,NA
+NASS Ag Census,pastured_woodland_acres,acres,"ag land, woodland, pastured - acres","2012, 2017",NA,NA
+NASS Ag Census,pastured_woodland_ops,operations,"ag land, woodland, pastured - number of operations","2012, 2017",NA,NA
+NASS Ag Census,tile_drainage_acres,acres,"practices, land use, drained by tile - acres + land drained by tile, acres, 2012","2012, 2017",NA,NA
+NASS Ag Census,tile_drainage_acres_per_op,acres,"practices, land use, drained by tile - area, measured in acres / operation + land drained by tile, acres, avg per farm, 2012","2012, 2017",NA,NA
+NASS Ag Census,tile_drainage_ops,operations,"practices, land use, drained by tile - number of operations + land drained by tile, farms, 2012","2012, 2017",NA,NA
+NASS Ag Census,total_operating_expenses,dollars,"expense totals, operating - expense, measured in $ / operation","2012, 2017",NA,NA
+NASS Ag Census,under_25,operations,"producers, principal, age lt 25 - number of producers + operators, principal, age lt 25 - number of operators","2012, 2017",NA,NA
+American Community Survey,bachelors_or_higher,proportion,proportion of county population with bachelor's degree or higher as highest degree,"2012, 2017",NA,NA
+American Community Survey,high_school_or_GED,proportion,proportion of county population with hs/ged as highest degree,"2012, 2017",NA,NA
+American Community Survey,population,people,total county population,"2012, 2017",NA,NA
+American Community Survey,some_college_or_associates,proportion,proportion of county population with some college or associates degree as highest degree,"2012, 2017",NA,NA
+land grant university datasets,university_overall,name,name of closest land grant university,NA,NA,NA
+land grant university datasets,closest_overall,km,distance from county centroid to closest land grant university,NA,NA,NA
+land grant university datasets,university_in_state,name,name of closest in-state land grant university,NA,NA,NA
+land grant university datasets,closest_in_state,km,distance from county centroid to closest in-state land grant university,NA,NA,NA
+land grant university datasets,university_presence,boolean,presence of land grant university in county,NA,NA,NA
+SoilGrids,pct_clay,proportion,average clay content of cultivated land,NA,NA,NA
+Schlenker 2009,aet,mm,actual evapotranspiration,"1950-1980, 1982-2011, 1997-2001, 2002-2006, 2007-2011, 2012-2016","full_year, growing_season","mean, z"
+Schlenker 2009,cwd,mm,climatic water deficit,"1950-1980, 1982-2011, 1997-2001, 2002-2006, 2007-2011, 2012-2016","full_year, growing_season","mean, z"
+Schlenker 2009,edd,degree days,degree days above 29 deg c,"1950-1980, 1982-2011, 1997-2001, 2002-2006, 2007-2011, 2012-2016","full_year, growing_season","mean, z"
+Schlenker 2009,ffp,days,length of frost-free period,"1950-1980, 1982-2011, 1997-2001, 2002-2006, 2007-2011, 2012-2016","full_year, growing_season","mean, z"
+Schlenker 2009,gdd,degree days,degree days between 5 and  29 deg c,"1950-1980, 1982-2011, 1997-2001, 2002-2006, 2007-2011, 2012-2016","full_year, growing_season","mean, z"
+Schlenker 2009,pet,mm,potential evapotranspiration,"1950-1980, 1982-2011, 1997-2001, 2002-2006, 2007-2011, 2012-2016","full_year, growing_season","mean, z"
+Schlenker 2009,prec,mm,total precipitation,"1950-1980, 1982-2011, 1997-2001, 2002-2006, 2007-2011, 2012-2016","full_year, growing_season","mean, z"
+Schlenker 2009,prec1in,days,number of days with more than 1 inch of precipitation,"1950-1980, 1982-2011, 1997-2001, 2002-2006, 2007-2011, 2012-2016","full_year, growing_season","mean, z"
+Schlenker 2009,prec1pct,days,number of days in the top 1% of local daily precipitation distribution,"1950-1980, 1982-2011, 1997-2001, 2002-2006, 2007-2011, 2012-2016","full_year, growing_season","mean, z"
+Schlenker 2009,prec2sigma,days,number of days with precipitation exceeding 2 local standard deviations,"1950-1980, 1982-2011, 1997-2001, 2002-2006, 2007-2011, 2012-2016","full_year, growing_season","mean, z"
+Schlenker 2009,tmax,deg C,average daily maximum temperature,"1950-1980, 1982-2011, 1997-2001, 2002-2006, 2007-2011, 2012-2016","full_year, growing_season","mean, z"
+Schlenker 2009,tmax1pct,days,number of days in the top 1% of local daily maximum temperature distribution,"1950-1980, 1982-2011, 1997-2001, 2002-2006, 2007-2011, 2012-2016","full_year, growing_season","mean, z"
+Schlenker 2009,tmax2sigma,days,number of days with maximum temperature exceeding 2 local standard deviations,"1950-1980, 1982-2011, 1997-2001, 2002-2006, 2007-2011, 2012-2016","full_year, growing_season","mean, z"
+Schlenker 2009,tmax30c,days,number of days tmax greater than 30 deg c,"1950-1980, 1982-2011, 1997-2001, 2002-2006, 2007-2011, 2012-2016","full_year, growing_season","mean, z"
+Schlenker 2009,tmean,deg C,average daily mean temperature,"1950-1980, 1982-2011, 1997-2001, 2002-2006, 2007-2011, 2012-2016","full_year, growing_season","mean, z"
+Schlenker 2009,tmin,deg C,average daily minimum temperature,"1950-1980, 1982-2011, 1997-2001, 2002-2006, 2007-2011, 2012-2016","full_year, growing_season","mean, z"
