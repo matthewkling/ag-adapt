@@ -104,9 +104,25 @@ compile_dictionary <- function(acs, land_grant, soils, climate){
     mutate(source_dataset = "SoilGrids")
   
   
+  ## YCOM ##################
+  
+  dict <- read_csv("data/YCOM/YCOM_2020_Metadata.csv") %>%
+    rename(variable = YCOM.VARIABLE.NAME,
+           desc = VARIABLE.DESCRIPTION) %>%
+    spread(variable, desc) %>%
+    janitor::clean_names() %>%
+    gather(variable, desc)
+  
+  ycom <- ycom %>%
+    select(variable) %>%
+    distinct() %>%
+    left_join(dict) %>%
+    mutate(source_dataset = "YCOM")
+  
+  
   ## combined #############
   
-  d <- bind_rows(ag_census, acs, land_grant, soils, clim) %>%
+  d <- bind_rows(ag_census, acs, land_grant, soils, clim, ycom) %>%
     select(source_dataset, variable, unit, description = desc, era, season, statistic) %>%
     mutate(description = str_to_lower(description))
   
@@ -116,12 +132,15 @@ compile_dictionary <- function(acs, land_grant, soils, climate){
 
 
 
-export_outputs <- function(acs, land_grant, soils, ag_census, climate){
+export_outputs <- function(acs, land_grant, soils, ag_census, climate, ycom){
   
   dict <- compile_dictionary(acs, land_grant, soils, climate) %>%
     write_csv("data/output/variables.csv")
   
-  bind_rows(ag_census, acs) %>%
+  bind_rows(acs %>% mutate(source_dataset = "ACS"), 
+            ycom %>% mutate(source_dataset = "YCOM"), 
+            ag_census %>% mutate(source_dataset = "AgCensus")) %>%
+    select(source_dataset, variable, fips, year, value, raw, imputed, floor, ceiling) %>%
     write_csv("data/output/time_series_data.csv")
   
   soils %>%

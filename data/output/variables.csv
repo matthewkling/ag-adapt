@@ -75,3 +75,30 @@ Schlenker 2009,tmax2sigma,days,number of days with maximum temperature exceeding
 Schlenker 2009,tmax30c,days,number of days tmax greater than 30 deg c,"1950-1980, 1982-2011, 1997-2001, 2002-2006, 2007-2011, 2012-2016","full_year, growing_season","mean, z"
 Schlenker 2009,tmean,deg C,average daily mean temperature,"1950-1980, 1982-2011, 1997-2001, 2002-2006, 2007-2011, 2012-2016","full_year, growing_season","mean, z"
 Schlenker 2009,tmin,deg C,average daily minimum temperature,"1950-1980, 1982-2011, 1997-2001, 2002-2006, 2007-2011, 2012-2016","full_year, growing_season","mean, z"
+YCOM,co2limits,NA,estimated percentage who somewhat/strongly support setting strict limits on existing coal-fire power plants,NA,NA,NA
+YCOM,co2limits_oppose,NA,estimated percentage who somewhat/strongly oppose setting strict limits on existing coal-fire power plants,NA,NA,NA
+YCOM,consensus,NA,estimated percentage who believe that most scientists think global warming is happening,NA,NA,NA
+YCOM,consensus_oppose,NA,estimated percentage who believe there is a lot of disagreement among scientists about whether or not global warming is happening,NA,NA,NA
+YCOM,devharm,NA,estimated percentage who think global warming will harm people in developing countries a moderate amount/a great deal,NA,NA,NA
+YCOM,devharm_oppose,NA,estimated percentage who think global warming will harm people in developing countries not at all/only a little,NA,NA,NA
+YCOM,fundrenewables,NA,estimated percentage who somewhat/strongly support funding research into renewable energy sources,NA,NA,NA
+YCOM,fundrenewables_oppose,NA,estimated percentage who somewhat/strongly oppose funding research into renewable energy sources,NA,NA,NA
+YCOM,futuregen,NA,estimated percentage who think global warming will harm future generations a moderate amount/a great deal,NA,NA,NA
+YCOM,futuregen_oppose,NA,estimated percentage who think global warming will harm future generations not at all/only a little,NA,NA,NA
+YCOM,happening,NA,estimated percentage who think that global warming is happening,NA,NA,NA
+YCOM,happening_oppose,NA,estimated percentage who do not think that global warming is happening,NA,NA,NA
+YCOM,harm_us,NA,estimated percentage who think global warming will harm people in the us a moderate amount/a great deal,NA,NA,NA
+YCOM,harm_us_oppose,NA,estimated percentage who think global warming will harm people in the us not at all/only a little,NA,NA,NA
+YCOM,human,NA,estimated percentage who think that global warming is caused mostly by human activities,NA,NA,NA
+YCOM,human_oppose,NA,estimated percentage who think that global warming is caused mostly by natural changes in the environment,NA,NA,NA
+YCOM,personal,NA,estimated percentage who think global warming will harm them personally a moderate amount/a great deal,NA,NA,NA
+YCOM,personal_oppose,NA,estimated percentage who think global warming will harm them personally not at all/only a little,NA,NA,NA
+YCOM,regulate,NA,estimated percentage who somewhat/strongly support regulating co2 as a pollutant,NA,NA,NA
+YCOM,regulate_oppose,NA,estimated percentage who somewhat/strongly oppose regulating co2 as a pollutant,NA,NA,NA
+YCOM,support_rps,NA,estimated percentage who somewhat/strongly support requiring utilities to produce 20% electricity from renewable sources,NA,NA,NA
+YCOM,support_rps_oppose,NA,estimated percentage who somewhat/strongly oppose requiring utilities to produce 20% electricity from renewable sources,NA,NA,NA
+YCOM,timing,NA,estimated percentage who think global warming will start to harm people in the united now/within 10 years,NA,NA,NA
+YCOM,timing_oppose,NA,"estimated percentage who think global warming will start to harm people in the united in 25 years or longer, or never",NA,NA,NA
+YCOM,total_pop,NA,total population,NA,NA,NA
+YCOM,worried,NA,estimated percentage who are somewhat/very worried about global warming,NA,NA,NA
+YCOM,worried_oppose,NA,estimated percentage who are not very/not at all worried about global warming,NA,NA,NA

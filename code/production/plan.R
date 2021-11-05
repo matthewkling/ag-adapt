@@ -6,6 +6,7 @@ plan <- drake_plan(
   land_grant = process_land_grant(),
   soils = process_soils(),
   climate = process_climate(),
+  ycom = process_ycom(),
   
-  results = export_outputs(acs, land_grant, soils, ag_census, climate)
+  results = export_outputs(acs, land_grant, soils, ag_census, climate, ycom)
 )
