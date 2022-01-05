@@ -137,24 +137,46 @@ export_outputs <- function(acs, land_grant, soils, ag_census, climate, ycom){
   dict <- compile_dictionary(acs, land_grant, soils, climate) %>%
     write_csv("data/output/variables.csv")
   
-  bind_rows(acs %>% mutate(source_dataset = "ACS"), 
+  ts <- bind_rows(acs %>% mutate(source_dataset = "ACS"), 
             ycom %>% mutate(source_dataset = "YCOM"), 
             ag_census %>% mutate(source_dataset = "AgCensus")) %>%
     select(source_dataset, variable, fips, year, value, raw, imputed, floor, ceiling) %>%
     write_csv("data/output/time_series_data.csv")
   
-  soils %>%
+  static <- soils %>%
     gather(variable, value, -fips) %>%
-    mutate(value = as.character(value)) %>%
-    bind_rows(land_grant) %>%
+    mutate(value = as.character(value),
+           source_dataset = "SoilGrids") %>%
+    bind_rows(land_grant %>% mutate(source_dataset = "land_grant")) %>%
     write_csv("data/output/static_data.csv")
   
   climate  %>%
     write_csv("data/output/climate_data.csv")
   
-  list(dict = dict, 
-       ts = ts, 
-       static = static, 
-       climate = climate)
+  # list(dict = dict, 
+  #      ts = ts, 
+  #      static = static, 
+  #      climate = climate)
+  
+  tsw <- ts %>%
+    mutate(value = ifelse(is.na(value), imputed, value)) %>%
+    select(source_dataset:value) %>%
+    unite(var, source_dataset, variable, year) %>%
+    distinct() %>%
+    spread(var, value)
+  
+  stw <- static %>%
+    unite(var, source_dataset, variable) %>%
+    spread(var, value, convert = T)
+  
+  climw <- climate %>%
+    mutate(fips = str_pad(fips, 5, "left", 0)) %>%
+    gather(variable, value, tmin:tmax2sigma_z) %>%
+    mutate(source_dataset = "climate") %>%
+    unite(var, source_dataset, variable, season, start, end) %>%
+    spread(var, value)
+  
+  w <- tsw %>% left_join(stw) %>% left_join(climw) %>%
+    write_csv("data/output/wide_data.csv")
 }
 
