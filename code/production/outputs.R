@@ -176,7 +176,12 @@ export_outputs <- function(acs, land_grant, soils, ag_census, climate, ycom){
     unite(var, source_dataset, variable, season, start, end) %>%
     spread(var, value)
   
-  w <- tsw %>% left_join(stw) %>% left_join(climw) %>%
+  gini <- read_csv("data/output/gini_agland_counties.csv") %>%
+    mutate(year = paste0("gini_", year)) %>%
+    spread(year, gini) %>%
+    rename(fips = fips_code)
+  
+  w <- tsw %>% left_join(stw) %>% left_join(climw) %>% left_join(gini) %>%
     write_csv("data/output/wide_data.csv")
 }
 
