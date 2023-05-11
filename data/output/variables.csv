@@ -1,9 +1,9 @@
 source_dataset,variable,unit,description,era,season,statistic
-NASS Ag Census,25_to_34,operations,"producers, principal, age 25 to 34 - number of producers + operators, principal, age 25 to 34 - number of operators","2012, 2017",NA,NA
-NASS Ag Census,35_to_44,operations,"producers, principal, age 35 to 44 - number of producers + operators, principal, age 35 to 44 - number of operators","2012, 2017",NA,NA
-NASS Ag Census,45_to_54,operations,"producers, principal, age 45 to 54 - number of producers + operators, principal, age 45 to 54 - number of operators","2012, 2017",NA,NA
-NASS Ag Census,55_to_64,operations,"producers, principal, age 55 to 64 - number of producers + operators, principal, age 55 to 59 - number of operators + operators, principal, age 60 to 64 - number of operators","2012, 2017",NA,NA
-NASS Ag Census,65_plus,operations,"producers, principal, age 65 to 74 - number of producers + producers, principal, age ge 75 - number of producers + operators, principal, age 65 to 69 - number of operators + operators, principal, age ge 70 - number of operators","2012, 2017",NA,NA
+NASS Ag Census,25_to_34,producers,"producers, principal, age 25 to 34 - number of producers + operators, principal, age 25 to 34 - number of operators","2012, 2017",NA,NA
+NASS Ag Census,35_to_44,producers,"producers, principal, age 35 to 44 - number of producers + operators, principal, age 35 to 44 - number of operators","2012, 2017",NA,NA
+NASS Ag Census,45_to_54,producers,"producers, principal, age 45 to 54 - number of producers + operators, principal, age 45 to 54 - number of operators","2012, 2017",NA,NA
+NASS Ag Census,55_to_64,producers,"producers, principal, age 55 to 64 - number of producers + operators, principal, age 55 to 59 - number of operators + operators, principal, age 60 to 64 - number of operators","2012, 2017",NA,NA
+NASS Ag Census,65_plus,producers,"producers, principal, age 65 to 74 - number of producers + producers, principal, age ge 75 - number of producers + operators, principal, age 65 to 69 - number of operators + operators, principal, age ge 70 - number of operators","2012, 2017",NA,NA
 NASS Ag Census,acres_operated,acres,farm operations - acres operated,"2012, 2017",NA,NA
 NASS Ag Census,chemical_expenses,dollars,"chemical totals - expense, measured in $","2012, 2017",NA,NA
 NASS Ag Census,chemical_ops,operations,chemical totals - operations with expense,"2012, 2017",NA,NA
@@ -32,12 +32,14 @@ NASS Ag Census,labor_hired_ops,dollars,"labor, hired - operations with expense",
 NASS Ag Census,mean_farm_size,acres,"farm operations - area operated, measured in acres / operation","2012, 2017",NA,NA
 NASS Ag Census,n_farm_ops,operations,farm operations - number of operations,"2012, 2017",NA,NA
 NASS Ag Census,net_income,dollars,"income, net cash farm, of operations - net income, measured in $ / operation","2012, 2017",NA,NA
-NASS Ag Census,newcomer_led,operations,"producers, principal, years on any operation, lt 6 years - number of producers + producers, principal, years on any operation, 6 to 10 years - number of producers + operators, principal, years on any operation, lt 3 years - number of operators + operators, principal, years on any operation, 3 to 4 years - number of operators + operators, principal, years on any operation, 5 to 9 years - number of operators","2012, 2017",NA,NA
+NASS Ag Census,newcomer_led,producers,"producers, principal, years on any operation, lt 6 years - number of producers + producers, principal, years on any operation, 6 to 10 years - number of producers + operators, principal, years on any operation, lt 3 years - number of operators + operators, principal, years on any operation, 3 to 4 years - number of operators + operators, principal, years on any operation, 5 to 9 years - number of operators","2012, 2017",NA,NA
 NASS Ag Census,no_till_acres,acres,"practices, land use, cropland, conservation tillage, no-till - acres + land on which no-till practices were used, acres, 2012","2012, 2017",NA,NA
 NASS Ag Census,no_till_acres_per_op,acres,"practices, land use, cropland, conservation tillage, no-till - area, measured in acres / operation + land on which no-till practices were used, acres, avg per farm, 2012","2012, 2017",NA,NA
 NASS Ag Census,no_till_ops,operations,"practices, land use, cropland, conservation tillage, no-till - number of operations + land on which no-till practices were used, farms, 2012","2012, 2017",NA,NA
 NASS Ag Census,nonwhite_led,operations,"producers, principal, hispanic - number of operations + producers, principal, american indian or alaska native - number of operations + producers, principal, asian - number of operations + producers, principal, black or african american - number of operations + producers, principal, native hawaiian or other pacific islander - number of operations + producers, principal, multi-race - number of operations + operators, principal, hispanic - number of operations + operators, principal, american indian or alaska native - number of operations + operators, principal, asian - number of operations + operators, principal, black or african american - number of operations + operators, principal, native hawaiian or other pacific islander - number of operations + operators, principal, multi-race - number of operations","2012, 2017",NA,NA
 NASS Ag Census,organic_prods,operations,"farm operations, organic - number of operations organic status: (nop usda certified) + farm operations, organic - number of operations organic status: (nop usda exempt) + ag land, organic, transitioning - number of operations organic status: (transitioning)","2012, 2017",NA,NA
+NASS Ag Census,owner_operated_acres,acres,"farm operations, organization, gt 50 pct ownership held by principal operator & related persons - acres operated + farm operations, organization, gt 50 pct ownership held by one producers household & extended family - acres operated","2012, 2017",NA,NA
+NASS Ag Census,owner_operated_ops,operations,"farm operations, organization, gt 50 pct ownership held by principal operator & related persons - number of operations + farm operations, organization, gt 50 pct ownership held by one producers household & extended family - operations with area operated","2012, 2017",NA,NA
 NASS Ag Census,pastured_cropland_acres,acres,"ag land, cropland, pastured only - acres","2012, 2017",NA,NA
 NASS Ag Census,pastured_cropland_ops,operations,"ag land, cropland, pastured only - number of operations","2012, 2017",NA,NA
 NASS Ag Census,pastured_other_acres,acres,"ag land, pastureland, (excl cropland & woodland) - acres","2012, 2017",NA,NA
@@ -48,7 +50,7 @@ NASS Ag Census,tile_drainage_acres,acres,"practices, land use, drained by tile -
 NASS Ag Census,tile_drainage_acres_per_op,acres,"practices, land use, drained by tile - area, measured in acres / operation + land drained by tile, acres, avg per farm, 2012","2012, 2017",NA,NA
 NASS Ag Census,tile_drainage_ops,operations,"practices, land use, drained by tile - number of operations + land drained by tile, farms, 2012","2012, 2017",NA,NA
 NASS Ag Census,total_operating_expenses,dollars,"expense totals, operating - expense, measured in $ / operation","2012, 2017",NA,NA
-NASS Ag Census,under_25,operations,"producers, principal, age lt 25 - number of producers + operators, principal, age lt 25 - number of operators","2012, 2017",NA,NA
+NASS Ag Census,under_25,producers,"producers, principal, age lt 25 - number of producers + operators, principal, age lt 25 - number of operators","2012, 2017",NA,NA
 American Community Survey,bachelors_or_higher,proportion,proportion of county population with bachelor's degree or higher as highest degree,"2012, 2017",NA,NA
 American Community Survey,high_school_or_GED,proportion,proportion of county population with hs/ged as highest degree,"2012, 2017",NA,NA
 American Community Survey,population,people,total county population,"2012, 2017",NA,NA
