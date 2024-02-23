@@ -1,4 +1,6 @@
-# County-level data on agricultural adaptation to climate change
+# AgAdapt: county-level data on agricultural adaptation to climate change
+
+The AgAdapt database brings together US county-level agricultural, economic, cultural, and biophysical variables from a variety of public sources, to support research on the adaptation of agricultural systems to climate change. The database is periodically updated as new data are released. This repository contains the combined dataset, as well as the code use to generate it by merging data from the original sources.
 
 The [compiled data](/data/output) are stored as four CSV files with different tabular formats:
 - A [metadata file](/data/output/variables.csv) documenting the names, units, and descriptions for the variables covered in the other files.
